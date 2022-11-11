@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+*,body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #1E2524;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.outer-wrapper{
+    background-color: #FBFCFC;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar-wrapper{
+    background-color: white;
+    padding:10px;
+    box-shadow: 1px 0px 24px -7px rgba(16, 24, 40, 0.05), 2px 0px 4px -2px rgba(16, 24, 40, 0.05);
+    height: 100vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.badge{
+width: 20px;
+height: 20px;
+background: #00ACB9;
+padding:3px;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
 }
-
-.App-link {
-  color: #61dafb;
+.profile-wrapper{
+background: #F6F9F9;
+border: 1px solid #F1F4F3;
+border-radius: 12px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-pic{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: container;
+}
+.list-item{
+    margin-left: 0px;
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.content-wrapper{
+    padding: 30px 10px;
+}
+.list-item > .active{
+    color:#1E293B;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+.list-item li{
+    color: #837B8E;
+}
+.header-title h3{
+    color: #1E2524;
+    font-size: 28px;
+    margin-bottom: 5px;
+    line-height: 34px;
+}
+.common-content{
+    margin-bottom: 30px;
+}
+.toolbar-containr{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mr-2{
+    margin-right: 15px!important;
+}
+.table-container{
+    margin-top: 35px!important;
+}
+.MuiDataGrid-columnHeaders{
+    background-color:#F5F9F9 ;
+}
+.profile-avatar{
+    display: flex;
+    align-items: center;
+}
+.ml-3{
+    margin-left: 15px;
+}
+.white-icon svg{
+    fill: white;
+}
+.d-flex{
+    display: flex;
+    align-items: center;
 }
