@@ -2,7 +2,7 @@ import { Button, Grid, List, CardContent,Card } from '@mui/material';
 import './App.css';
 import Sidebar from './components/Sidebar';
 import Table from './components/Table';
-
+import FilterListIcon from '@mui/icons-material/FilterList';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import Divider from '@mui/material/Divider';
@@ -58,13 +58,14 @@ function App() {
                       <Button className='mr-2' variant="outlined" size="large">
                         <GridViewOutlinedIcon />
                       </Button>
-                      <Button className='mr-2' variant="contained" size="large" color='primary'>
-                        <SortIcon style={{color:"white"}} />
+                      <Button className='mr-2 white-icon' variant="contained" size="large" color='primary'>
+                        <SortIcon  />
                       </Button>
                       {/* <Button variant="outlined" startIcon={<FilterListIcon />}>
                         Sort by
                       </Button> */}
-                      <Button className='mr-2' variant="outlined" size="large"  color="primary">
+                      
+                      <Button variant="outlined" size="large" className='mr-2' startIcon={<FilterListIcon />}>
                         Sort by
                       </Button>
                       <Button variant="contained" size="large"  color="primary">

@@ -12,6 +12,7 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import StarBorder from '@mui/icons-material/StarBorder';
 import { Divider } from '@mui/material';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 const Sidebar = () => {
     const [open, setOpen] = React.useState(true);
     const handleClick = () => {
@@ -67,11 +68,11 @@ const Sidebar = () => {
                 </ListItemButton>
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
-                        <ListItemButton sx={{ pl: 4 }}>
+                        <ListItemButton sx={{ pl: 4 }} style={{ background:"#E5FDFF",color:"white"}}>
                             <ListItemIcon>
                                 <StarBorder />
                             </ListItemIcon>
-                            <ListItemText primary="Staff Listing" />
+                            <ListItemText color='#00ACB9' primary="Staff Listing" />
                         </ListItemButton>
                         <ListItemButton sx={{ pl: 4 }}>
                             <ListItemIcon>
@@ -139,13 +140,16 @@ const Sidebar = () => {
                     <ListItemText primary="Logout" />
                 </ListItemButton>
             </List>
-                <div className="profile-wrapper">
+                <div className="profile-wrapper" style={{padding:8,display:"flex",justifyContent:"space-between"}}>
                     <div className="d-flex">
                         <img src="./assets/images/avatar.png" className='profile-pic' alt="" />
-                        <p><b>Super Admin</b> </p> <br />
+                        <div style={{padding:5,marginLeft:5}}>
+                        <p><b>Super Admin</b> </p>
                         <p>STD-06</p>
+                        </div>
                     </div>
-
+                    <ChevronRightIcon />
+                
                 </div>
        </div>
     );

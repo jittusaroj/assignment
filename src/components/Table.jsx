@@ -1,10 +1,12 @@
 import React from "react";
 import { DataGrid, useGridApiRef, GridToolbar } from "@mui/x-data-grid";
 import Radio from "@mui/material/Radio";
+
 import { Avatar, Button ,TextField} from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { debounce } from "@mui/material/utils";
+
 const VISIBLE_FIELDS = ["name", "email", "status", "role", "id"];
 
 const rows = [
@@ -58,9 +60,10 @@ const columns = [
         headerName: "STATUS",
        
     }, {
-        field: "",
-        flex: 1,
+        field: "action",
+
         headerName: "Action",
+        width:250,
         renderCell: (params) => (
             <>
                 <div className="actions">
@@ -102,30 +105,30 @@ export default function Table() {
 
     return (
         <>
-            <TextField
-                value={searchValue}
-                onChange={handleSearchValueChange}
-                label="Search"
-                sx={{ mb: 1 }}
-            />
-        <DataGrid
-            rows={rows}
-            columns={columns}
-                apiRef={apiRef}
-            autoHeight
-                disableColumnFilter
-                disableColumnSelector
-                disableDensitySelector
-                components={{ Toolbar: GridToolbar }}
-                componentsProps={{
-                    toolbar: {
-                        showQuickFilter: true,
-                        quickFilterProps: { debounceMs: 500 },
-                    },
-                }}
-            disableColumnMenu
-          
-        />
+            <div >
+                <DataGrid
+                    // sx={{ overflowX: 'scroll', overflowY: 'scroll' }}
+                    rows={rows}
+                    columns={columns}
+                    apiRef={apiRef}
+                    autoHeight
+                    disableColumnFilter
+                    disableColumnSelector
+                    disableDensitySelector
+                    columnBuffer={2}
+                    columnThreshold={2}
+                    components={{ Toolbar: GridToolbar }}
+                    componentsProps={{
+                        toolbar: {
+                            showQuickFilter: true,
+                            quickFilterProps: { debounceMs: 500 },
+                        },
+                    }}
+                    disableColumnMenu
+
+                />
+            </div>   
+        
         </>
     );
 }
